@@ -10,19 +10,21 @@ import java.util.Scanner;
 
 /**
  *
- * @author student
+ * @author Adrian Hrycaj
  */
 public class WprowadzZKonsoli {
     int i;
     char c;
+    long l;
     Scanner scanner = new Scanner(System.in);
     
     public WprowadzZKonsoli() {
 
     }
     
+    
     public void wprowadzInt(){
-        System.out.print("Wprowadź liczbę całkowitą: ");;
+        System.out.print("Wprowadź liczbę całkowitą: ");
         try {
             this.i=scanner.nextInt();
         }
@@ -32,12 +34,22 @@ public class WprowadzZKonsoli {
     }
     
     public void wprowadzChar(){
-        System.out.print("Wprowadź liczbę całkowitą: ");;
+        System.out.print("Wprowadź liczbę znak: ");
         try {
-            this.c=scanner.nexc
+            this.c=scanner.next().charAt(0);
         }
         catch (InputMismatchException e) {
             System.out.println("Podano błędny typ danych");
+        }
+    }
+
+    public void wprowadzLong(){
+        System.out.print("Wprowadź liczbę ułamkową: ");
+        try {
+        this.l=scanner.next().charAt(0);
+        }
+        catch (InputMismatchException e) {
+        System.out.println("Podano błędny typ danych");
         }
     }
 }
